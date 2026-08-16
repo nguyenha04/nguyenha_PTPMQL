@@ -21,13 +21,13 @@ jobs:
 
       # 2. Đóng gói ứng dụng
       - name: Restore dependencies
-          run: dotnet restore DemoMVC.csproj
+        run: dotnet restore DemoMVC.csproj
 
       - name: Build project
-          run: dotnet build DemoMVC.csproj -c Release --no-restore
+        run: dotnet build DemoMVC.csproj -c Release --no-restore
 
       - name: Publish project
-          run: dotnet publish DemoMVC.csproj -c Release -o ./publish --no-build
+        run: dotnet publish DemoMVC.csproj -c Release -o ./publish --no-build
       # 3. TẮT SERVER: Tạo và upload app_offline.htm bằng curl (Không làm hỏng file sync state)
       - name: ⛔ Stop Server (Upload app_offline.htm)
         run: |
