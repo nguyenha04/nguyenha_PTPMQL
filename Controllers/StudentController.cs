@@ -1,26 +1,20 @@
-using Microsoft.AspNetCore.Mvc;
-using DemoMVC.Models;
-
 namespace DemoMVC.Controllers
 {
+    using DemoMVC.Models;
+    using Microsoft.AspNetCore.Mvc;
+
     public class StudentController : Controller
     {
-
-        [HttpGet]
-        public IActionResult Create()
+        public IActionResult Index()
         {
-            return View(new Student());
+            return View();
         }
-
         [HttpPost]
-        public IActionResult Create(Student student)
+        public IActionResult Index(Student std)
         {
-            ViewBag.Message = "Thêm sinh viên thành công!";
-            ViewBag.FullName = student.FullName;
-            ViewData["Address"] = student.Address;
-            ViewData["University"] = student.University;
-
-            return View(student);
+            var result = "Hello " + std.FullName + " (" + std.StudentCode + ") - " + std.Address;
+            ViewBag.Message = result;
+            return View();
         }
     }
 }

@@ -1,14 +1,11 @@
-using Microsoft.AspNetCore.Mvc;
-
 namespace DemoMVC.Controllers
 {
+
+    using Microsoft.AspNetCore.Mvc;
+
     public class LessonController : Controller
     {
         public IActionResult Lesson4()
-        {
-            return View();
-        }
-           public IActionResult Lesson5()
         {
             return View();
         }

@@ -6,7 +6,7 @@
 </p>
 
 <p>
-    - cấu tạo của Route trong .NET MVC "{controller=Home}/{action=Index}/{id?}" trong đó:
+- cấu tạo của Route trong .NET MVC "{controller=Home}/{action=Index}/{id?}" trong đó:
     + Home là giá trị nhập vào tương ứng với tên của controller bỏ hậu tố controller
     + Index là tên method public
     + id là tham số
@@ -25,19 +25,20 @@
     - View là file Razor (.cshtml) chứa markup HTML và mã C# nhẹ.
     - View nhận dữ liệu từ controller và render ra HTML trả về cho trình duyệt.
     - View thường nằm trong thư mục có tên trùng với controller.
+</p>
 
 <h3>4. Gửi và nhận dữ liệu giữa Controller và View</h3>
 <p>
-    <b>ViewBag:</b> Là một đối tượng động (dynamic)giúp truyền dữ liệu đơn giản nhanh chóng mà không cần định nghĩa kiểu dữ liệu cứng.
+    <b>ViewBag/ViewData:</b> Dùng khi cần truyền dữ liệu nhỏ lẻ, độc lập không cần tạo Model riêng.
+</p>
 
 <p>
-    <b>ViewData:</b>Tương tự ViewBag nhưng hoạt động dạng từ điển (Dictionary) với cặp key-value, cần ép kiểu khi lấy dữ liệu ra ở View.
+    <b>TempData:</b> Dùng để lưu dữ liệu tạm thời qua các request (thường dùng khi chuyển hướng RedirectToAction).
 </p>
 
 <h3>5. Gửi và nhận dữ liệu thông qua Model</h3>
 <p>
-    Model dùng để biểu diễn và lưu trữ dữ liệu.
-    MVC sử dụng Model Binding để tự động ánh xạ dữ liệu từ Form
-    vào đối tượng Model trong Controller.
+    - Controller: return 
+    - View(model);View: Khai báo @Model TênModel ở đầu trang và gọi @Model.Property để dùng.
 </p>
 
