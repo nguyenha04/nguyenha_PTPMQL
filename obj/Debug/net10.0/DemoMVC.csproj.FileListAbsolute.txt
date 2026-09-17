@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\LATITUDE 5530\DemoMVC\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\LATITUDE 5530\DemoMVC\bin\Debug\net10.0\appsettings.json
 C:\Users\LATITUDE 5530\DemoMVC\bin\Debug\net10.0\DemoMVC.staticwebassets.runtime.json
@@ -95,6 +96,8 @@ C:\Users\LATITUDE 5530\DemoMVC\obj\Debug\net10.0\refint\DemoMVC.dll
 C:\Users\LATITUDE 5530\DemoMVC\obj\Debug\net10.0\DemoMVC.pdb
 C:\Users\LATITUDE 5530\DemoMVC\obj\Debug\net10.0\DemoMVC.genruntimeconfig.cache
 C:\Users\LATITUDE 5530\DemoMVC\obj\Debug\net10.0\ref\DemoMVC.dll
+=======
+>>>>>>> 2f1a4f9 (Initial ASP.NET Core MVC project)
 C:\Users\LATITUDE 5530\Documents\BichHaNguien\PTPMQL\New folder\DemoMVC\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\LATITUDE 5530\Documents\BichHaNguien\PTPMQL\New folder\DemoMVC\bin\Debug\net10.0\appsettings.json
 C:\Users\LATITUDE 5530\Documents\BichHaNguien\PTPMQL\New folder\DemoMVC\bin\Debug\net10.0\DemoMVC.staticwebassets.runtime.json
