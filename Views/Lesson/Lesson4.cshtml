@@ -1,0 +1,43 @@
+<h2>Nội dung buổi học ngày 03/09/2026</h2>
+
+<h3>1. Định tuyến trong MVC</h3>
+<p>
+    - Route là cơ chế ánh xạ Url hoặc có thể nói Route chịu trách nhiệm điều hướng đến trang tương ứng với Url được nhập
+</p>
+
+<p>
+    - cấu tạo của Route trong .NET MVC "{controller=Home}/{action=Index}/{id?}" trong đó:
+    + Home là giá trị nhập vào tương ứng với tên của controller bỏ hậu tố controller
+    + Index là tên method public
+    + id là tham số
+</p>
+
+<h3>2. Tạo Controller và Action</h3>
+<p>
+    - Controller là lớp chịu trách nhiệm xử lý yêu cầu HTTP.
+    - Mỗi phương thức public trong controller được gọi là một action.
+    - Action trả về IActionResult, ví dụ View(), RedirectToAction(), Json(), Content().
+    - Controller lấy dữ liệu từ model và kiểm soát luồng thực thi.
+</p>
+
+<h3>3. Tạo View tương ứng với Controller và Action</h3>
+<p>
+    - View là file Razor (.cshtml) chứa markup HTML và mã C# nhẹ.
+    - View nhận dữ liệu từ controller và render ra HTML trả về cho trình duyệt.
+    - View thường nằm trong thư mục có tên trùng với controller.
+
+<h3>4. Gửi và nhận dữ liệu giữa Controller và View</h3>
+<p>
+    <b>ViewBag:</b> Là một đối tượng động (dynamic)giúp truyền dữ liệu đơn giản nhanh chóng mà không cần định nghĩa kiểu dữ liệu cứng.
+
+<p>
+    <b>ViewData:</b>Tương tự ViewBag nhưng hoạt động dạng từ điển (Dictionary) với cặp key-value, cần ép kiểu khi lấy dữ liệu ra ở View.
+</p>
+
+<h3>5. Gửi và nhận dữ liệu thông qua Model</h3>
+<p>
+    Model dùng để biểu diễn và lưu trữ dữ liệu.
+    MVC sử dụng Model Binding để tự động ánh xạ dữ liệu từ Form
+    vào đối tượng Model trong Controller.
+</p>
+
