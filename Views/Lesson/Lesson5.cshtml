@@ -1,0 +1,114 @@
+@{
+    ViewData["Title"] = "Lesson 5 - Bootstrap 5 và CSS";
+}
+
+<div class="container py-4">
+    <div class="mb-4">
+        <h1 class="text-primary">LESSON 5: TÍCH HỢP BOOTSTRAP 5 VÀ TÁCH FILE CSS</h1>
+    </div>
+
+    <hr />
+
+    <!-- PHẦN 1 -->
+    <section class="mb-5">
+        <h2 class="text-primary">1. Tích hợp Bootstrap 5 vào ASP.NET Core MVC</h2>
+        <h4>1.2. Cách tích hợp Bootstrap bằng LibMan</h4>
+        <ol>
+            <li>Click chuột phải vào project trong Visual Studio.</li>
+            <li>Chọn <strong>Add → Client-Side Library...</strong>.</li>
+            <li>Provider: <strong>cdnjs</strong>.</li>
+            <li>Chọn thư viện Bootstrap 5.x.</li>
+            <li>Target Location: <strong>wwwroot/lib/bootstrap</strong>.</li>
+            <li>Chọn <strong>Install</strong>.</li>
+        </ol>
+
+        <h4>1.3. Tích hợp Bootstrap vào _Layout.cshtml</h4>
+        <p>Bootstrap CSS được khai báo trong phần <code>&lt;head&gt;</code>:</p>
+        <pre><code>&lt;link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" /&gt;</code></pre>
+
+        <p>Bootstrap JavaScript được khai báo trước thẻ đóng <code>&lt;/body&gt;</code>:</p>
+        <pre><code>&lt;script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+
+        <h4>1.5. Ví dụ sử dụng Bootstrap</h4>
+        <pre><code>&lt;div class="container mt-5"&gt;
+    &lt;h1 class="text-primary"&gt;Xin chào Bootstrap 5!&lt;/h1&gt;
+
+    &lt;p class="lead"&gt;
+        Đây là trang ASP.NET Core MVC sử dụng Bootstrap 5.
+    &lt;/p&gt;
+
+    &lt;button class="btn btn-primary"&gt;
+        Bootstrap hoạt động
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4>1.6. Một số class Bootstrap thường dùng</h4>
+        <table class="table table-bordered table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>Class</th>
+                    <th>Ý nghĩa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>container</code></td><td>Tạo vùng nội dung có chiều rộng phù hợp.</td></tr>
+                <tr><td><code>row</code></td><td>Tạo một hàng trong hệ thống Grid.</td></tr>
+                <tr><td><code>col-md-4</code></td><td>Chia cột chiếm 4/12 chiều rộng từ breakpoint md.</td></tr>
+                <tr><td><code>btn btn-primary</code></td><td>Tạo nút Bootstrap kiểu primary.</td></tr>
+                <tr><td><code>card</code></td><td>Tạo thành phần Card.</td></tr>
+                <tr><td><code>mt-5</code></td><td>Tạo margin-top.</td></tr>
+                <tr><td><code>text-primary</code></td><td>Định dạng màu chữ theo màu primary.</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- PHẦN 2 -->
+    <section class="mb-5">
+        <h2 class="text-primary">2. Tách file CSS riêng và tích hợp vào Layout</h2>
+        <h4>2.1. Tích hợp CSS vào _Layout.cshtml</h4>
+        <p>Trong phần <code>&lt;head&gt;</code>, khai báo Bootstrap trước và CSS riêng sau:</p>
+        <pre><code>&lt;link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" /&gt;
+&lt;link rel="stylesheet" href="~/css/site.css" /&gt;</code></pre>
+
+        <div class="alert alert-info">
+            <strong>Lưu ý:</strong> Nên đặt <code>site.css</code> sau Bootstrap để các quy tắc CSS
+            riêng có thể tùy chỉnh hoặc ghi đè các quy tắc của Bootstrap khi cần.
+        </div>
+
+        <h4>2.2. Sử dụng CSS riêng trong View</h4>
+        <pre><code>&lt;div class="page-title"&gt;
+    &lt;h1&gt;Trang chủ&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;button class="btn btn-primary custom-btn"&gt;
+    Thêm sinh viên
+&lt;/button&gt;</code></pre>
+
+        <p>
+            Trong ví dụ trên, <code>btn btn-primary</code> là class của Bootstrap,
+            còn <code>page-title</code> và <code>custom-btn</code> là class do lập trình viên
+            tự định nghĩa trong <code>site.css</code>.
+        </p>
+    </section>
+
+    <!-- PHẦN 3 -->
+    <section class="mb-5">
+        <h2 class="text-primary">6. Quy trình thực hành </h2>
+        <ol class="list-group list-group-numbered">
+            <li class="list-group-item">Cài Bootstrap 5 bằng LibMan.</li>
+            <li class="list-group-item">Kiểm tra thư mục <code>wwwroot/lib/bootstrap</code>.</li>
+            <li class="list-group-item">Tạo hoặc kiểm tra file <code>wwwroot/css/site.css</code>.</li>
+            <li class="list-group-item">Thêm Bootstrap CSS vào <code>_Layout.cshtml</code>.</li>
+            <li class="list-group-item">Thêm <code>site.css</code> sau Bootstrap CSS.</li>
+            <li class="list-group-item">Thêm Bootstrap JavaScript trước <code>&lt;/body&gt;</code>.</li>
+            <li class="list-group-item">Kiểm tra <code>app.UseStaticFiles()</code> trong <code>Program.cs</code>.</li>
+            <li class="list-group-item">Sử dụng class Bootstrap và class CSS riêng trong các View.</li>
+        </ol>
+    </section>
+
+    <div class="alert alert-success">
+        <strong>Kết luận:</strong> Bootstrap 5 cung cấp các thành phần giao diện có sẵn,
+        trong khi <code>site.css</code> dùng để tùy chỉnh giao diện riêng của project.
+        <code>_Layout.cshtml</code> là nơi tích hợp các tài nguyên dùng chung để các View có thể tái sử dụng.
+    </div>
+</div>

@@ -13,11 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DemoMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56f89b54a0ddd168fd31397674eb692a98b54e1c")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+016988c93c9cebc3aea942c3f221f5224760f71b")]
->>>>>>> 2f1a4f9 (Initial ASP.NET Core MVC project)
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b216527716d2c460d79078c2d5218a3a8ed32507")]
 [assembly: System.Reflection.AssemblyProductAttribute("DemoMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DemoMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
